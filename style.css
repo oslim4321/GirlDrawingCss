@@ -1,0 +1,218 @@
+:root {
+  --background: #6192a1;
+  --skin: #925e4c;
+  /* 7b3f00 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.box {
+  position: relative;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  box-shadow: 25px 25px 0 rgba(0, 0, 0, 0.05);
+  margin: 40px;
+}
+.body {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #fb6971;
+  width: 320px;
+  height: 180px;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  overflow: hidden;
+}
+.body span {
+  width: 180px;
+  height: 90px;
+  background-color: var(--background);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+.body span::before {
+  content: "";
+  height: 100px;
+  width: 20px;
+  background-color: var(--background);
+  position: absolute;
+  top: -90px;
+  transform: rotate(-15deg);
+}
+.body span::after {
+  content: "";
+  height: 100px;
+  width: 20px;
+  background-color: var(--background);
+  position: absolute;
+  top: -90px;
+  right: 0;
+  transform: rotate(15deg);
+}
+.body::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  left: 90px;
+  top: 100px;
+  z-index: 2;
+  border-radius: 50%;
+}
+.body::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  right: 90px;
+  top: 100px;
+  z-index: 2;
+  border-radius: 50%;
+}
+.neck {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  background-color: var(--skin);
+  bottom: 150px;
+  left: 170px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  z-index: 3;
+}
+.neck::before {
+  content: "";
+  position: absolute;
+  top: o;
+  left: 0;
+  /* background-color: rgba(160, 85, 4, 0.5); */
+  background-color: (rgba(0, 0, 0, 0.1), transparent);
+  width: 100%;
+  height: 75%;
+}
+.face {
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  width: 160px;
+  height: 180px;
+  background-color: var(--skin);
+  z-index: 5;
+}
+.eyes {
+  position: absolute;
+  display: flex;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+}
+.eyes .eye {
+  position: relative;
+  width: 45px;
+  height: 45px;
+}
+.eyes .eye::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: transparent;
+  top: -8px;
+  left: 0;
+  border-radius: 50%;
+  box-shadow: 0 -3px 0 #111;
+}
+.eyes .eye i {
+  position: absolute;
+  left: 0;
+  /* top: 0; */
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.eyes .eye i::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: black;
+  border-radius: 50%;
+  right: 60%;
+  top: 50%;
+  transform: translate(-10%, -10%);
+  box-shadow: 0 0 0 5px #3d5d89;
+}
+
+.mouth {
+  position: absolute;
+  background-color: #ff4e57;
+  width: 60px;
+  height: 30px;
+  bottom: 30px;
+  left: 50px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: inset 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.face .mouth:hover {
+  height: 20px;
+  bottom: 40px;
+  border-radius: 10px;
+}
+.heir {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 250px;
+  height: 450px;
+  background-color: black;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  border-bottom-left-radius: 100px;
+}
+
+.box:nth-child(2) .heir {
+  bottom: 200px;
+  height: 250px;
+  border-radius: 50%;
+  top: 40px;
+}
+.box:nth-child(2) .body {
+  background-color: #ffcc14;
+}
